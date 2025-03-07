@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Corps principal du satellite -->
+  <rect x="30" y="45" width="40" height="25" rx="5" ry="5" fill="#5A5A5A" stroke="#303030" stroke-width="1"/>
+  
+  <!-- Antenne parabolique -->
+  <ellipse cx="50" cy="35" rx="15" ry="5" fill="none" stroke="#808080" stroke-width="2"/>
+  <line x1="50" y1="40" x2="50" y2="45" stroke="#808080" stroke-width="2"/>
+  
+  <!-- Panneaux solaires -->
+  <rect x="10" y="50" width="20" height="6" fill="#4169E1" stroke="#303030" stroke-width="1"/>
+  <rect x="70" y="50" width="20" height="6" fill="#4169E1" stroke="#303030" stroke-width="1"/>
+  
+  <!-- Connexions des panneaux solaires -->
+  <rect x="25" y="51" width="5" height="4" fill="#5A5A5A" stroke="#303030" stroke-width="1"/>
+  <rect x="70" y="51" width="5" height="4" fill="#5A5A5A" stroke="#303030" stroke-width="1"/>
+  
+  <!-- Détails technologiques -->
+  <rect x="35" y="50" width="30" height="15" rx="2" ry="2" fill="#4F4F4F" stroke="#303030" stroke-width="1"/>
+  <circle cx="42" cy="57" r="3" fill="#C0C0C0" stroke="#303030" stroke-width="1"/>
+  <circle cx="58" cy="57" r="3" fill="#C0C0C0" stroke="#303030" stroke-width="1"/>
+  
+  <!-- Antennes de communication -->
+  <line x1="35" y1="40" x2="30" y2="30" stroke="#A0A0A0" stroke-width="1"/>
+  <circle cx="30" cy="30" r="2" fill="#C0C0C0"/>
+  <line x1="65" y1="40" x2="70" y2="30" stroke="#A0A0A0" stroke-width="1"/>
+  <circle cx="70" cy="30" r="2" fill="#C0C0C0"/>
+  
+  <!-- Propulseurs -->
+  <rect x="35" y="70" width="6" height="3" fill="#A0522D" stroke="#303030" stroke-width="1"/>
+  <rect x="59" y="70" width="6" height="3" fill="#A0522D" stroke="#303030" stroke-width="1"/>
+</svg>
