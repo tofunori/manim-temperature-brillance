@@ -5,6 +5,9 @@ channels:
 dependencies:
   - python=3.10
   - pip
+  - ffmpeg  # Dépendance essentielle pour le rendu vidéo
+  - cairo   # Dépendance pour le rendu graphique
+  - pango   # Dépendance pour le rendu de texte
   - pip:
     - manim
     - ipython
