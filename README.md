@@ -24,16 +24,13 @@ où :
 
 ## Animations disponibles
 
-Ce dépôt contient trois animations principales :
+Ce dépôt contient plusieurs animations :
 
 1. **EvolutionTemperatureBrillance** : Animation simple montrant la relation entre émissivité et température de brillance pendant le gel de l'eau
-2. **BrightnessTemperatureEvolution** : Version améliorée avec des explications scientifiques détaillées
+2. **BrightnessTemperatureEvolutionImproved** : Version améliorée avec disposition claire des éléments et explications scientifiques détaillées
 3. **MicrowaveRemoteSensing** : Animation complète sur les principes de la télédétection micro-onde
 4. **SatelliteMicroResonaTechnology** : Présentation des technologies satellitaires utilisées en télédétection micro-onde
-
-## À propos de Manim
-
-[Manim](https://www.manim.community/) est une bibliothèque Python pour créer des animations mathématiques précises, développée initialement par Grant Sanderson (3Blue1Brown). Elle permet de créer des visuels élégants pour expliquer des concepts scientifiques et mathématiques.
+5. **RadarBasics**, **SoilRoughnessEffect**, **SoilMoistureEffect**, **IncidenceAngleEffect** : Série d'animations sur l'humidité du sol avec radar
 
 ## Installation avec Conda
 
@@ -62,7 +59,7 @@ Ce dépôt contient trois animations principales :
 
 ### Dépendances système
 
-Manim nécessite certaines dépendances système pour fonctionner correctement:
+Manim nécessite certaines dépendances système pour fonctionner correctement. Ces dépendances sont incluses dans le fichier environment.yml, mais certaines peuvent nécessiter une installation séparée sur certains systèmes:
 
 #### Pour Linux (Ubuntu/Debian):
 ```bash
@@ -76,7 +73,7 @@ brew install cairo pango ffmpeg
 ```
 
 #### Pour Windows:
-Installez [MiKTeX](https://miktex.org/download) et [FFmpeg](https://ffmpeg.org/download.html).
+Si vous rencontrez des problèmes avec FFmpeg après l'installation via conda, vous pouvez télécharger manuellement [FFmpeg](https://ffmpeg.org/download.html) et l'ajouter à votre PATH.
 
 ## Exécution des exemples
 
@@ -92,15 +89,88 @@ chmod +x run_example.sh
 # Ou manuellement
 cd examples
 manim -pqh temperature_brillance.py EvolutionTemperatureBrillance
+manim -pqh improved_temperature_brillance.py BrightnessTemperatureEvolutionImproved
 manim -pqh microwave_remote_sensing.py BrightnessTemperatureEvolution
 manim -pqh microwave_remote_sensing.py MicrowaveRemoteSensing
 manim -pqh microwave_remote_sensing.py SatelliteMicroResonaTechnology
+manim -pqh soil_moisture_radar.py RadarBasics
 ```
 
 Les options:
 - `-p`: Affiche l'animation une fois rendue
 - `-q`: Qualité (l=low, m=medium, h=high)
 - `-s`: Exporte l'animation en dernier frame seulement
+
+## Gestion des mises à jour GitHub
+
+### Récupérer les dernières modifications du dépôt
+
+Pour mettre à jour votre copie locale avec les dernières modifications du dépôt GitHub :
+
+1. Assurez-vous d'être dans le répertoire du projet :
+   ```bash
+   cd chemin/vers/manim-temperature-brillance
+   ```
+
+2. Récupérez les dernières modifications :
+   ```bash
+   git pull origin main
+   ```
+
+3. Si vous avez fait des modifications locales que vous souhaitez conserver mais qui sont en conflit :
+   ```bash
+   # Sauvegarde de vos modifications locales
+   git stash
+   
+   # Récupération des dernières modifications
+   git pull origin main
+   
+   # Réapplication de vos modifications
+   git stash pop
+   ```
+
+### Appliquer les mises à jour de l'environnement conda
+
+Si le fichier `environment.yml` a été mis à jour, mettez à jour votre environnement conda :
+
+```bash
+conda env update -f environment.yml
+```
+
+### Exécuter un nouveau script ou une version mise à jour
+
+1. Activez l'environnement conda (si ce n'est pas déjà fait) :
+   ```bash
+   conda activate manim-env
+   ```
+
+2. Exécutez le script mis à jour :
+   ```bash
+   cd examples
+   manim -pqh nom_du_script.py NomDeLaClasse
+   ```
+
+### Contribution au projet
+
+Si vous souhaitez contribuer au projet avec vos propres modifications :
+
+1. Créez une branche pour vos modifications :
+   ```bash
+   git checkout -b ma-nouvelle-fonctionnalite
+   ```
+
+2. Faites vos modifications et validez-les :
+   ```bash
+   git add .
+   git commit -m "Description de mes modifications"
+   ```
+
+3. Poussez vos modifications vers GitHub :
+   ```bash
+   git push origin ma-nouvelle-fonctionnalite
+   ```
+
+4. Créez une Pull Request sur GitHub pour proposer l'intégration de vos modifications.
 
 ## Description scientifique
 
